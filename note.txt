@@ -1,0 +1,15 @@
+1, tạo model: php artisan make:model Menu -m, tạo model thì tạo model và migration tương ứng luôn
+2, tạo migration: php artisan make:migration add_column_deleted_at_table_categories --table=categories
+3, tạo migrate (2): php artisan migrate
+4, chạy lệnh để render ra bảng: php artisan migrate
+5, tạo controller: php artisan make:controller MenuController
+//
+6, cài file manager:
+- composer require unisharp/laravel-filemanager
+- php artisan vendor:publish --tag=lfm_config
+- php artisan vendor:publish --tag=lfm_public
+- php artisan storage:link
+
+*note: lúc đầu chạy: php artisan storage :link là để đồng bộ ảnh chỗ storage và public/storage-> nếu mà k đồng bộ thì sau này bên trình duyệt sẽ k truy cập duược ảnh đâu
+ 7, tạo request validation: php artisan make:request ProductAddRequest
+
